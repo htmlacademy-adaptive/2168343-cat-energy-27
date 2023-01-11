@@ -10,6 +10,9 @@
 
   @include above-desktop() {
     padding: 56px 60px 56px 80px;
+    position: absolute;
+    background: $color-white;
+    top: 95px;
   }
 }
 

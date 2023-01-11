@@ -2,10 +2,15 @@
   padding-top: 20px;
   padding-bottom: 20px;
 
+  @include above-tablet {
+    padding-top: 0;
+  }
+
   @include above-desktop() {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 80px;
+    padding-bottom: 35px;
   }
 }
 
@@ -13,12 +18,19 @@
   background-color: $accent-secondary;
   padding: 30px 20px 22px 20px;
   margin-bottom: 20px;
+  position: relative;
 
   &:last-child {
     margin-bottom: 0;
   }
 
+  @include above-tablet() {
+    padding: 77px 316px 57px 52px;
+    margin-bottom: 30px;
+  }
+
   @include above-desktop() {
+    padding: 77px 61px 59px 52px;
     margin-bottom: 0;
   }
 }
@@ -32,14 +44,99 @@
   text-transform: uppercase;
   margin: 0;
   margin-bottom: 29px;
+  padding-left: 72px;
+
+  @include above-tablet() {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 24px;
+    padding-left: 0;
+  }
+
+  @include above-desktop() {
+    padding-left: 162px;
+    margin-bottom: 73px;
+  }
+}
+
+.programs__title--slim {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 22px;
+    top: 21px;
+    width: 50px;
+    height: 53px;
+    background-image: url("../img/cat_black-slim.svg");
+    background-repeat: no-repeat;
+    background-size: 50px 53px;
+
+    @include above-tablet() {
+      width: 200px;
+      height: 211px;
+      background-size: 200px 211px;
+      left: auto;
+      top: 81px;
+      right: 62px;
+    }
+
+    @include above-desktop() {
+      background-size: 100px 106px;
+      top: 41px;
+      left: 52px;
+      right: auto;
+    }
+  }
+}
+
+.programs__title--pro {
+  &::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    top: 24px;
+    width: 67px;
+    height: 50px;
+    background-image: url("../img/cat_black-pro.svg");
+    background-repeat: no-repeat;
+    background-size: 67px 50px;
+
+    @include above-tablet() {
+      width: 268px;
+      height: 200px;
+      background-size: 268px 200px;
+      left: auto;
+      top: 91px;
+      right: 28px;
+    }
+
+    @include above-desktop() {
+      background-size: 134px 100px;
+      top: 47px;
+      left: 33px;
+      right: auto;
+    }
+  }
 }
 
 .programs__text {
   margin: 0;
-  margin-bottom: 38px;
+  margin-bottom: 42px;
+
+  @include above-tablet() {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 52px;
+    color: $text-title;
+  }
+
+  @include above-desktop() {
+    margin-bottom: 27px;
+  }
 }
 
 .programs__link {
+  position: relative;
   font-family: $custom-font;
   font-weight: 400;
   font-size: 16px;
@@ -47,4 +144,25 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $text-title;
+  padding-right: 50px;
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 101px;
+    background-image: url("../img/pointer-right.svg");
+    width: 24px;
+    height: 12px;
+
+    @include above-tablet() {
+      bottom: 8px;
+      left: 129px;
+    }
+  }
+
+  @include above-tablet() {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }

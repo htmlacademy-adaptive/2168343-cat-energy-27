@@ -1,0 +1,11 @@
+.location__map {
+  background-image: url("../img/map.jpg");
+  height: 362px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include above-tablet() {
+    height: 400px;
+  }
+}

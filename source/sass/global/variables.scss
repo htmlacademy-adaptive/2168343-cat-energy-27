@@ -1,6 +1,10 @@
 $color-green: #68b738;
+$color-green-invisible: rgba(104, 183, 56, 0.85);
 $color-lighten-gray: #f2f2f2;
 $color-lighten-gray-var2: #eaeaea;
+$color-lighten-gray-var3: #e6e6e6;
+$color-lighten-gray-var4: #d9d9d9;
+$color-darken-gray: #cdcdcd;
 $color-dark-gray: #444444;
 $color-black: #000000;
 $color-white: #ffffff;
@@ -16,6 +20,9 @@ $text-secondary: $color-white;
 $text-alternative: $color-lighten-black-var2;
 $text-contact: $color-lighten-black;
 $block-background: $color-lighten-gray-var2;
+$offer-background: $color-green-invisible;
+$border-color: $color-lighten-gray-var3;
+$special-border-color: $color-darken-gray;
 
 $default-font: "Lato", "Arial", sans-serif;
 $custom-font: "Oswald", "Arial", sans-serif;

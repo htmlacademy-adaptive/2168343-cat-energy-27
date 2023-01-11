@@ -1,17 +1,34 @@
 .offer {
   font-family: $custom-font;
-  background-color: rgba($accent-primary, 0.85);
   text-align: center;
   color: $text-secondary;
-  padding: 27px 0 20px;
+  background-image:
+    linear-gradient(to bottom, $offer-background 302px, $color-white 302px),
+    url("../img/offer-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover, 320px 302px;
+  background-position: top center;
 
-  @include above-tablet {
-    background-color: $text-secondary;
+  @include above-tablet() {
+    position: relative;
+    background: none;
+    text-align: start;
     color: $text-title;
+    padding-bottom: 526px;
   }
 
-  @include above-desktop {
-    background-color: rgba($accent-primary, 0.85);
+  @include above-desktop() {
+    padding-bottom: 267px;
+  }
+}
+
+.offer__wrapper {
+  @include above-tablet() {
+    padding-left: 88px;
+  }
+
+  @include above-desktop() {
+    padding-left: 80px;
   }
 }
 
@@ -21,15 +38,65 @@
   font-weight: 400;
   margin: 0;
   margin-bottom: 25px;
+  padding-top: 27px;
+
+  @include above-tablet() {
+    font-size: 60px;
+    line-height: 60px;
+    padding-top: 62px;
+    margin-bottom: 41px;
+  }
+
+  @include above-desktop() {
+    margin-bottom: 40px;
+    padding-top: 111px;
+  }
 }
 
 .offer__intro {
   margin: 0 0 29px;
   line-height: 14px;
   text-transform: uppercase;
+
+  @include above-tablet() {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 49px;
+  }
+
+  @include above-desktop() {
+    margin-bottom: 52px;
+  }
 }
 
 .offer__img {
-  display: block;
-  margin: 0 auto 10px;
+  @include above-tablet() {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    bottom: 0;
+    width: 709px;
+    height: 609px;
+  }
+
+  @include above-desktop() {
+    bottom: auto;
+    left: 35%;
+    top: 50px;
+    width: 552px;
+    height: 499px;
+  }
+}
+
+.offer__link {
+  display: grid;
+  padding-top: 10px;
+  padding-bottom: 10px;
+
+  @include above-tablet() {
+    display: inline-flex;
+    font-size: 20px;
+    line-height: 20px;
+    padding: 17px 28px;
+  }
 }

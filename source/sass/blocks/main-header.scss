@@ -1,9 +1,37 @@
-.main-header {
+.main-header__wrapper {
   @include above-tablet {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-top: 24px;
+    flex-wrap: wrap;
+  }
+
+  @include above-desktop() {
+    position: relative;
+    padding-top: 53px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      top: 0;
+      left: 50%;
+      width: 50%;
+      height: 694px;
+      background-color: $offer-background;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 50%;
+      height: 694px;
+      top: 0;
+      left: 50%;
+      background-image: url(../img/offer-background--desktop.jpg);
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
   }
 }
 
@@ -12,6 +40,11 @@
 }
 
 .main-header__logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  height: 65px;
+
   @include above-tablet() {
     display: none;
 
@@ -19,4 +52,14 @@
       display: block;
     }
   }
+}
+
+.main-header__logo-image {
+  position: absolute;
+}
+
+.main-header__logo span {
+  height: 18px;
+  margin-left: auto;
+  margin-right: auto;
 }
